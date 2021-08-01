@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>How to ww3school</title>
+	<script type="text/javascript" src="function.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<h2>Menus</h2>
+  <h3 class="body">Icon Bar</h3>
+  	<h4>How To Create an Icon Bar</h4>
+  	  
+  	  <div class="icon-bar1">
+  			<a class="active1" href="#"><i class="fa fa-home"></i></a>
+	    	<a href="#"><i class="fa fa-search"></i></a>
+	    	<a href="#"><i class="fa fa-envelope"></i></a>
+	    	<a href="#"><i class="fa fa-globe"></i></a>
+	   	 <a href="#"><i class="fa fa-trash"></i></a>
+	    </div>
+			<br>
+			<br>
+  	  <div class="icon-bar2">
+  			<a class="active" href="#"><i class="fa fa-home"></i></a>
+	    	<a href="#"><i class="fa fa-search"></i></a>
+	    	<a href="#"><i class="fa fa-envelope"></i></a>
+	    	<a href="#"><i class="fa fa-globe"></i></a>
+	   	 <a href="#"><i class="fa fa-trash"></i></a>
+	    </div>
+
+	<h3 class="body">Menu Icon</h3>  
+		<h4>menu icon</h4>
+			<div class="menuicon1">
+				<div></div>
+				<div></div>
+				<div></div>
+			</div> 
+
+			<b>classList.toggle</b>
+
+			<div class="menuicon2" onclick="myFunction(this)">
+				<div class="bar1"></div>
+				<div class="bar2"></div>
+				<div class="bar3"></div>
+			</div>
+<script type="text/javascript">
+	function myFunction(x){
+		x.classList.toggle("change")
+	}
+</script>
+
+
+	<h3 class="body">Accordion</h3>
+	<button class="accordion1">Section 1</button>
+	<div class="panelaccordion1">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+	</div>
+	<button class="accordion1">Section 2</button>
+	<div class="panelaccordion1">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+	</div>
+	<button class="accordion1">Section 3</button>
+	<div class="panelaccordion1">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+	</div>
+
+
+<script type="text/javascript">
+	var accaccordion1 = document.getElementsByClassName("accordion1");
+	var iaccordion1;
+
+	for (iaccordion1 = 0; iaccordion1 < accaccordion1.length; iaccordion1++) {
+		accaccordion1[iaccordion1].addEventListener("click", function() {
+ 	   this.classList.toggle("activeaccordion1");
+     var panel = this.nextElementSibling;
+     if (panel.style.display === "block") {
+       panel.style.display = "none";
+     } else {
+       panel.style.display = "block";
+     }
+   });
+ 	}
+</script>
+<p><b>Note</b>: addEventListener("click", function), classList.toggle(classname), nextElementSibling</p>
+
+<button class="accordion2">Section 1</button>
+	<div class="panelaccordion2">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+	</div>
+	<button class="accordion2">Section 2</button>
+	<div class="panelaccordion2">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+	</div>
+	<button class="accordion2">Section 3</button>
+	<div class="panelaccordion2">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+	</div>
+
+
+<script type="text/javascript">
+	var accaccordion2 = document.getElementsByClassName("accordion2");
+	var iaccordion2;
+
+	for (iaccordion2 = 0; iaccordion2 < accaccordion2.length; iaccordion2++) {
+		accaccordion2[iaccordion2].addEventListener("click", function() {
+ 	   this.classList.toggle("activeaccordion2");
+     var panel = this.nextElementSibling;
+     if (panel.style.maxHeight) {
+    	 panel.style.maxHeight =null;
+   
+     } else {
+       panel.style.maxHeight =panel.scrollHeight+"px";
+     }
+   });
+ 	}
+</script>
+<br>
+<button onclick="myFunction()">click</button><span id="text1"></span>
+<pre>
+let x=0;
+
+  if(x) {
+    x=null
+    document.getElementById('text1').innerHTML=typeof x
+  } else 
+    x = 1
+    document.getElementById('text1').innerHTML=typeof x
+</pre>
+<pre>
+let x=0;
+
+  if(typeof x == "number") {
+    x=null
+    document.getElementById('text1').innerHTML=typeof x
+  } else 
+    x = 1
+    document.getElementById('text1').innerHTML=typeof x
+</pre>
+
+<script type="text/javascript">
+	let x=0;
+	function myFunction(){
+	if(typeof x == "number") {
+		x=null;
+		document.getElementById('text1').innerHTML=typeof x + x;
+	} else 
+		{x = 1;
+		document.getElementById('text1').innerHTML=typeof x + x}
+}
+</script>
+
+<h2 class="body">Tabs</h2>
+
+	<div class="tabTabs">
+		<button id="defaultOpenTabs" class="tablinksTabs activeTabs" onclick="openCityTabs('LondonTabs')">London</button>
+		<button class="tablinksTabs" onclick="openCityTabs('ParisTabs')">Paris</button>
+		<button class="tablinksTabs" onclick="openCityTabs('TokyoTabs')">Tokyo</button>
+	</div>
+	<!-- tabs content -->
+	<div id="LondonTabs" class="tabscontentTabs">
+		<span onclick='this.parentElement.style.display="none"' class="closeTabs">&times</span>
+		<h2>London</h2>
+		<p>London is the capital city of England.</p>
+	</div>
+	<div id="ParisTabs" class="tabscontentTabs">
+		<span onclick='this.parentElement.style.display="none"' class="closeTabs">&times</span>
+		<h2>Paris</h2>
+		<p>Paris is the capital of France.</p>
+	</div>
+	<div id="TokyoTabs" class="tabscontentTabs">
+		<span onclick='this.parentElement.style.display="none"' class="closeTabs">&times</span>
+		<h2>Tokyo</h2>
+		<p>Tokyo is the capital of Japan.</p>
+	</div>
+	<!-- script -->
+<script type="text/javascript">
+	function openCityTabs(cityName) {
+		var iTabs;
+		let tabscontentTabs = document.getElementsByClassName('tabscontentTabs')
+		for (iTabs=0;iTabs < tabscontentTabs.length;iTabs++) {
+			tabscontentTabs[iTabs].style.display="none"
+		}
+		let tablinksTabs = document.getElementsByClassName('tablinksTabs');
+		for (iTabs=0; iTabs < tablinksTabs.length;iTabs++) {
+			tablinksTabs[iTabs].className = tablinksTabs[iTabs].className.replace (" activeTabs", "")
+		}
+		document.getElementById(cityName).style.display="block";
+		event.currentTarget.className += " activeTabs"; // them active vao class button. Xoa avtive truoc do
+	}
+	document.getElementById("defaultOpenTabs").click();
+</script>
+
+	<!-- Chu thich bai hoc -->
+<p><b>Note</b>: event.currentTarget thuc hien hanh dong tai element da kich hoat</p>
+<pre>
+	&lt;button class="tablinks active" onclick="function()">London&lt;/button> // event.currentTarget se thuc dien o day
+	&lt;div class="tabscontent">&lt;/div> // click thuc hien thay doi class o day
+</pre>
+<p>Dung animation de hien mo tab</p>
+<pre>
+	  animation:effecttab
+	@keyframes effecttab {
+	  from {opacity: 0;}
+	  to {opacity: 1;}
+</pre>
+<p>Dung Javascript auto mo tab mac dinh</p>
+<pre>	document.getElementById("defaultOpen").click();</pre>
+<p>Tao dau x do'ng trang content</p>
+<pre>	onclick='this.parentElement.style.display="none"' class="close"</pre>
+
+
+</body>
+</html>
